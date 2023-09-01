@@ -1,0 +1,18 @@
+.home-content {
+    display: flex;
+    padding: 5px 0;
+    height: 100%;
+}
+.home-content .flex-1 {
+    flex: 1;
+}
+.home-content .left-box {
+    overflow: auto;
+}
+.flex {
+    display: flex;
+    align-items: 'center';
+}
+.justify-between {
+    justify-content: space-between;
+}

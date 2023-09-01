@@ -21,15 +21,15 @@ const menus: {
 } = {
     menus: [
         /** 真正的日志数据路由 */
-        { key: '/log/home', title: '首页', icon: 'mobile', component: 'Home' },
-        { key: '/log/activeAlarm', title: '活跃告警', icon: 'mobile', component: 'ActiveAlarm' },
-        { key: '/log/historyAlarm', title: '历史告警', icon: 'mobile', component: 'HistoryAlarm' },
-        { key: '/log/logTracking', title: '日志追踪', icon: 'mobile', component: 'LogTracking' },
-        { key: '/log/objectList', title: '对象列表', icon: 'mobile', component: 'ObjectList' },
-        { key: '/log/teamManage', title: '团队管理', icon: 'mobile', component: 'TeamManage' },
-        { key: '/log/userManage', title: '用户管理', icon: 'mobile', component: 'UserManage' },
-        { key: '/log/warnRules', title: '告警规则', icon: 'mobile', component: 'WarnRules' },
-        { key: '/log/searchOnline', title: '即时查询', icon: 'mobile', component: 'SearchOnline' },
+        { key: '/log/home', title: '数据首页', component: 'Home' },
+        { key: '/log/activeAlarm', title: '活跃告警', component: 'ActiveAlarm' },
+        { key: '/log/historyAlarm', title: '历史告警', component: 'HistoryAlarm' },
+        { key: '/log/logTracking', title: '日志追踪', component: 'LogTracking' },
+        { key: '/log/objectList', title: '对象列表', component: 'ObjectList' },
+        { key: '/log/teamManage', title: '团队管理', component: 'TeamManage' },
+        { key: '/log/userManage', title: '用户管理', component: 'UserManage' },
+        { key: '/log/warnRules', title: '告警规则', component: 'WarnRules' },
+        { key: '/log/searchOnline', title: '即时查询', component: 'SearchOnline' },
 
         /** -------------------暂时保留下面的demo------------------------- */
         // 菜单相关路由

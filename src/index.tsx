@@ -6,6 +6,7 @@ import Page from './Page';
 import * as serviceWorker from './serviceWorker';
 import * as apis from './service';
 // import { AppContainer } from 'react-hot-loader';
+import './style/reset-css.less';
 import './style/lib/animate.css';
 import './style/index.less';
 import './style/antd/index.less';

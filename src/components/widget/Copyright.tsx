@@ -9,11 +9,7 @@
 import React from 'react';
 
 const Copyright = () => {
-    return (
-        <div>
-            react-admin ©{new Date().getFullYear()} Created by yezihaohao@yezi.haohao@foxmail.com
-        </div>
-    );
+    return <div>react-admin-log-data ©{new Date().getFullYear()} Created by yin_lean@163.com</div>;
 };
 
 export default Copyright;

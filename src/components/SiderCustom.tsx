@@ -1,6 +1,3 @@
-/**
- * Created by hao.cheng on 2017/4/13.
- */
 import React, { useState, useEffect } from 'react';
 import { Layout } from 'antd';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
@@ -9,6 +6,7 @@ import SiderMenu from './SiderMenu';
 import { useAlita } from 'redux-alita';
 import { useSwitch } from '../utils/hooks';
 import { usePrevious } from 'ahooks';
+import { BugTwoTone } from '@ant-design/icons';
 const { Sider } = Layout;
 
 type SiderCustomProps = RouteComponentProps<any> & {
@@ -79,7 +77,17 @@ const SiderCustom = (props: SiderCustomProps) => {
             style={{ overflowY: 'auto' }}
             className="sider-custom"
         >
-            <div className="logo" />
+            <div
+                className="logo"
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}
+            >
+                <BugTwoTone />
+                {!props.collapsed && <span style={{ marginLeft: 14 }}>深度监测</span>}
+            </div>
             <SiderMenu
                 menus={[...routes.menus, ...smenus]}
                 onClick={menuClick}

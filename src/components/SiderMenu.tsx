@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { IFMenu } from '../routes/config';
 import { MenuProps } from 'antd/lib/menu';
-import { AppstoreTwoTone } from '@ant-design/icons';
+import { AlertTwoTone, AppstoreTwoTone } from '@ant-design/icons';
+import { useSwitch } from '../utils/hooks';
+
 const renderMenuItem = (
     item: IFMenu // item.route 菜单单独跳转的路由
 ) => (
-    <Menu.Item key={item.key}>
+    <Menu.Item key={item.key} icon={<AlertTwoTone />}>
         <Link to={(item.route || item.key) + (item.query || '')}>
             {/* {item.icon && <Icon type={item.icon} />} */}
             <span className="nav-text">{item.title}</span>
@@ -43,7 +45,6 @@ type SiderMenuProps = MenuProps & {
 
 const SiderMenu = ({ menus, ...props }: SiderMenuProps) => {
     const [dragItems, setDragItems] = useState<any>([]);
-
     useEffect(() => {
         setDragItems(menus);
     }, [menus]);
