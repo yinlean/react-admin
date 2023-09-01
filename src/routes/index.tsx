@@ -5,7 +5,8 @@ import React from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { useAlita } from 'redux-alita';
 import umbrella from 'umbrella-storage';
-import AllComponents from '../components';
+import OldComponents from '../components';
+import LogComponents from '../data-page';
 import routesConfig, { IFMenuBase, IFMenu } from './config';
 import { checkLogin } from '../utils';
 import RouteWrapper from './RouteWrapper';
@@ -16,8 +17,8 @@ type CRouterProps = {
 
 const CRouter = (props: CRouterProps) => {
     const { auth } = props;
+    const AllComponents = Object.assign(OldComponents, LogComponents);
     const [smenus] = useAlita({ smenus: null }, { light: true });
-
     const getPermits = (): any[] | null => {
         return auth ? auth.permissions : null;
     };

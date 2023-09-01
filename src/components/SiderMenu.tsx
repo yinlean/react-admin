@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { IFMenu } from '../routes/config';
 import { MenuProps } from 'antd/lib/menu';
-
+import { AppstoreTwoTone } from '@ant-design/icons';
 const renderMenuItem = (
     item: IFMenu // item.route 菜单单独跳转的路由
 ) => (
@@ -26,6 +26,7 @@ const renderSubMenu = (item: IFMenu) => {
                     <span className="nav-text">{item.title}</span>
                 </span>
             }
+            icon={<AppstoreTwoTone />}
         >
             {item.subs!.map((sub) => (sub.subs ? renderSubMenu(sub) : renderMenuItem(sub)))}
         </Menu.SubMenu>
