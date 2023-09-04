@@ -1,4 +1,4 @@
-import { Card, Form, Input, Menu, Row } from 'antd';
+import { Card, Collapse, Input, Row } from 'antd';
 import React from 'react';
 import './index.less';
 import { SettingOutlined } from '@ant-design/icons';
@@ -13,7 +13,6 @@ const Home = (props: Iprops) => {
         <Card className="left-box " style={{ width }}>
             <Row justify="space-between" align="middle">
                 业务组
-                {/* <p>业务组</p> */}
                 <SettingOutlined />
             </Row>
             <Input.Search
@@ -22,13 +21,14 @@ const Home = (props: Iprops) => {
                 onSearch={onSearch}
                 style={{ width: '100%', margin: '6px 0' }}
             />
-            <div>
-                <h6 style={{ color: '#666' }}>未分组对象</h6>
-                <div style={{ marginLeft: 4, color: '#999', cursor: 'pointer' }}>
-                    <p>对象1</p>
-                    <p>对象2</p>
-                </div>
-            </div>
+            <Collapse accordion>
+                <Collapse.Panel header="default" key="1">
+                    <p>分组一</p>
+                </Collapse.Panel>
+                <Collapse.Panel header="object 1" key="2">
+                    <p>分组二</p>
+                </Collapse.Panel>
+            </Collapse>
         </Card>
     );
 };

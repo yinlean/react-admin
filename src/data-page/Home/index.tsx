@@ -8,12 +8,6 @@ const Home = () => {
     const [tableData, setTableData] = useState([{}]);
     const columns = [
         {
-            title: '集群',
-            dataIndex: 'name',
-            key: 'name',
-            // render: text => <a>{text}</a>,
-        },
-        {
             title: '标识',
             dataIndex: 'name',
             key: 'name',
@@ -35,36 +29,6 @@ const Home = () => {
             key: 'name',
             // render: text => <a>{text}</a>,
         },
-        {
-            title: '状态',
-            dataIndex: 'name',
-            key: 'name',
-            // render: text => <a>{text}</a>,
-        },
-        {
-            title: '单核负载',
-            dataIndex: 'name',
-            key: 'name',
-            // render: text => <a>{text}</a>,
-        },
-        {
-            title: '内存',
-            dataIndex: 'name',
-            key: 'name',
-            // render: text => <a>{text}</a>,
-        },
-        {
-            title: '根分区',
-            dataIndex: 'name',
-            key: 'name',
-            // render: text => <a>{text}</a>,
-        },
-        {
-            title: '备注',
-            dataIndex: 'name',
-            key: 'name',
-            // render: text => <a>{text}</a>,
-        },
     ];
     const onSearch = (value: string) => console.log(value);
     return (
@@ -77,9 +41,6 @@ const Home = () => {
                             <Form.Item>
                                 <Button shape="circle" icon={<LoadingOutlined />} />
                                 <Button shape="circle" icon={<Loading3QuartersOutlined />} />
-                            </Form.Item>
-                            <Form.Item label="" name="layout">
-                                <Input placeholder="集群" />
                             </Form.Item>
                             <Form.Item label="">
                                 <Input.Search

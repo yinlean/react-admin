@@ -9,6 +9,9 @@
 .home-content .left-box {
     overflow: auto;
 }
+.home-content .ant-card-body {
+    padding: 10px;
+}
 .flex {
     display: flex;
     align-items: 'center';
